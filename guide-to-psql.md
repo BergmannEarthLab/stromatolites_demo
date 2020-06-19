@@ -51,17 +51,8 @@ First, wee what columns are in the ```strat_phrases``` table:
 ```
 strom_demo=# \d strat_phrases;
 ```
-Then, let's cheks
 
 
-
-
-Let's explore ```strat_target```, which will contain sentences that have both a *target* ("stromatol-") and a strat name (e.g. "Gamuza Fm."). 
-
-### First, see what columns are in the ```strat_target``` table:
-```
-strom_demo=# \d strat_target;
-```
 ### Check to see that the app is correctly identifying strat_names by looking at the root (e.g. "Gamuza") and flag (e.g. "Formation") for 10 distinct, random strat phrases:
 ```
 strom_demo=# SELECT DISTINCT strat_phrase, strat_phrase_root, strat_flag FROM strat_phrases LIMIT 10;
@@ -96,7 +87,8 @@ Line 161 of ```ext_strat_phrases.py``` *should* be excluding words like "The" an
 
 Looking at the next 10 strat_phrases, we see some more interesting (and unwanted) results:
 ```
-strom_demo=# SELECT DISTINCT strat_phrase,strat_phrase_root, strat_flag FROM strat_phrases LIMIT 20;
+strom_demo=# SELECT DISTINCT strat_phrase,strat_phrase_root, strat_flag FROM strat_phrases LIMIT 20;  
+
  Aisciai Group                       | Aisciai                   | Group
  Autochthonous Mortinsburg Formation | Autochthonous Mortinsburg | Formation
  The Goodwin Limestone               | The Goodwin               | Limestone
