@@ -55,3 +55,13 @@ strom_demo=# SELECT DISTINCT strat_phrase, strat_name_id FROM strat_phrases WHER
 (1 row)
 ```
 5. 
+
+# June 26, 2020
+Was working through the output of ext_strat_phrases.py and found a few recurring patterns that may not be preferable. The words "series" and "system" frequently appeared in the stratigraphic phrase. Some examples include:
+
+* PENNSYLVANIAN SYSTEM Cherokee Group
+* CAMBRIAN SYSTEM Eminence Dolomite
+* Series-Gasconade Dolomite
+* Series-Bachelor Formation
+
+Not entirely sure how to address these occurrences or even if they need to be addressed but just wanted to put them out here.
